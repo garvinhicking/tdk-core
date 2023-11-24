@@ -14,10 +14,19 @@
     }
   ],
   "require": {
-    "garvinhicking/tdk-cli": "@dev"
+    "garvinhicking/tdk-cli": "@main",
+    "composer/composer": "^2.6",
+    "composer-plugin-api": "^2.3"
   },
-  "require-dev": {
-    "composer/composer": "^2.6"
+  "extra": {
+    "class": "GarvinHicking\\TdkCore\\Plugin",
+    "plugin-modifies-downloads": true,
+    "plugin-modifies-install-path": true
+  },
+  "autoload": {
+    "psr-4": {
+      "GarvinHicking\\TdkCore\\": "src/"
+    }
   },
   "config": {
     "allow-plugins": {
