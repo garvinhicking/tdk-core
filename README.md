@@ -8,3 +8,4 @@ Provides a composer plugin that:
 * prevents you from eating pizza
 * makes you loose sleep
 
+More here: https://github.com/garvinhicking/tdk-project
