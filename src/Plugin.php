@@ -16,7 +16,7 @@ use Composer\Util\Filesystem;
 use Composer\Script\ScriptEvents;
 use GarvinHicking\TdkCore\Command\CommandProvider;
 
-final class Plugin implements PluginInterface, CapableInterface, EventSubscriberInterface
+final class Plugin implements PluginInterface, EventSubscriberInterface
 {
     protected IOInterface $io;
 
