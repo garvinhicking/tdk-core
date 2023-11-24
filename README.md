@@ -1,2 +1,10 @@
 # tdk-core
-Dummy: tdk-core (composer-plugin)
+
+Provides a composer plugin that:
+
+* Injects a repository
+* Fetches GIT (via tdk-cli!)
+* Uses CPU cycles
+* prevents you from eating pizza
+* makes you loose sleep
+
