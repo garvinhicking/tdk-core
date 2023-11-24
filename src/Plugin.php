@@ -14,6 +14,7 @@ use Composer\Plugin\PluginInterface;
 use Composer\Script\Event;
 use Composer\Util\Filesystem;
 use Composer\Script\ScriptEvents;
+use Composer\Util\ProcessExecutor;
 use GarvinHicking\TdkCore\Command\CommandProvider;
 use Symfony\Component\Finder\Finder;
 
@@ -124,7 +125,7 @@ final class Plugin implements PluginInterface, EventSubscriberInterface
         // If we have reached this place, we can finally create the GIT checkout.
         // \GarvinHicking\TdkCli\Cli::help($event);
         $process = new ProcessExecutor();
-        $command = sprintf('vendor/bin/tdk-cli clone');
+        $command = 'vendor/bin/tdk-cli clone';
         $event->getIO()->writeError('Create sub-process <info>vendor/bin/tdk-cli clone</info>');
         $status = $process->executeTty($command);
 
