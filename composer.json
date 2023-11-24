@@ -1,0 +1,29 @@
+{
+  "name": "garvinhicking/tdk-core",
+  "description": "TYPO3 Composer Development Kit: Core Plugin",
+  "type": "composer-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Jochen Roth",
+      "email": "jochen.roth@b13.com"
+    },
+    {
+      "name": "Garvin Hicking",
+      "email": "blog@garv.in"
+    }
+  ],
+  "require": {
+    "garvinhicking/tdk-cli": "@dev"
+  },
+  "require-dev": {
+    "composer/composer": "^2.6"
+  },
+  "config": {
+    "allow-plugins": {
+      "typo3/class-alias-loader": true,
+      "typo3/cms-composer-installers": true,
+      "garvinhicking/tdk-core": true
+    }
+  }
+}
