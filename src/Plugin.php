@@ -110,20 +110,8 @@ final class Plugin implements PluginInterface, EventSubscriberInterface
         // can be overwritten with a GIT-clone working directory.
         // To be really safe, we check that NOTHING else besides
         // our "composer-repository.bak" file exists inside the directory.
-        $finder = Finder::create()
-            ->ignoreVCS(false)
-            ->ignoreDotFiles(false)
-            ->depth(0)
-            ->notName(['composer-repository.bak', '.DS_Store'])
-            ->in($gitTargetDir);
+        // That check is performed within the CLI.
 
-        if (count($finder) > 0) {
-            $event->getIO()->writeError(sprintf("TDK: Directory <info>%s</info> is populated with unknown files. Please reset directory to vanilla state.", $this->REPOSITORY_DIR));
-            return false;
-        }
-
-        // If we have reached this place, we can finally create the GIT checkout.
-        // \GarvinHicking\TdkCli\Cli::help($event);
         $process = new ProcessExecutor();
         $command = 'vendor/bin/tdk-cli clone';
         $event->getIO()->writeError('Create sub-process <info>vendor/bin/tdk-cli clone</info>');
