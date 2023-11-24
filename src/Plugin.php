@@ -21,7 +21,7 @@ final class Plugin implements PluginInterface, CapableInterface, EventSubscriber
     {
         $this->io = $io;
 
-        $io->writeln('TDK-CORE: Activate event.');
+        $io->info('TDK-CORE: Activate event.');
         // MAYBE: Only ensure the folder is created, if "typo3-core-packages" is a local path
         // @todo: This is not ideal, but in case the repository is defined but
         //      the folder does not exist, composer simply breaks.
@@ -46,19 +46,19 @@ final class Plugin implements PluginInterface, CapableInterface, EventSubscriber
 
     public function deactivate(Composer $composer, IOInterface $io): void
     {
-        $io->writeln('TDK-CORE: De-Activate event.');
+        $io->info('TDK-CORE: De-Activate event.');
         // TODO: Implement deactivate() method.
     }
 
     public function uninstall(Composer $composer, IOInterface $io): void
     {
-        $io->writeln('TDK-CORE: UnInstall event.');
+        $io->info('TDK-CORE: UnInstall event.');
         // TODO: Implement uninstall() method.
     }
 
     public function install(Composer $composer, IOInterface $io): void
     {
-        $io->writeln('TDK-CORE: Install event.');
+        $io->info('TDK-CORE: Install event.');
         // TODO: Implement install() method.
     }
 }
